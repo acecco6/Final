@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,400&family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+.fa-caret-down {
+  display: none !important; }
+
+body {
+  position: relative;
+  padding-bottom: 30px;
+  min-height: 100vh;
+  background-color:#f8cfcf;
+}
+
+header
+#btn-nav, #btn-label {
+  display: none; }
+
+header {
+  width: 100%;
+  min-height: 75px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  margin-left: 10px;
+  border-radius: 10px;
+  width: 240px;
+  height: 75px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  & img{
+    width: 100%;
+    height:70px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.navegacion {
+  width: auto;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; }
+.menu{
+    & .sub-menu {
+        position: absolute;
+        display: none;
+        background-color: #ffaaaa;
+        width: 135px; 
+        z-index: 3;
+
+        & li {
+            display: block;
+            text-align: center; 
+
+            & a{
+                font-size: 17px;
+                padding: 7px;
+                height: 60px;
+                line-height: 46px;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+    & li {
+        list-style: none;
+        display: inline-block; 
+
+        & a{
+            display: block;
+            height: 75px;
+            padding: 7px;
+            line-height: 61px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+          
+        }
+    }
+}
+.menu li a:hover {
+    background-color: #f7b2b2;
+}
+.menu .sub-menu li a:hover {
+    background-color: #ff8686; 
+}
+@media screen and (min-width: 861px) {
+  .menu li:hover ul {
+    display: block; } }
+
+.pie {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 7px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 0; }
+
+@media screen and (max-width: 890px) {
+    .fa-caret-down {
+        display: inline !important;
+        font-size: 26px; 
+    }
+    #btn-label {
+        display: block;
+        margin-right: 25px;
+        font-size: 30px; 
+    }
+  .navegacion {display: none; }
+
+    #btn-nav:checked ~ .navegacion {
+        position: absolute;
+        top: 75px;
+        display: block;
+        height: auto;
+        width: 100%;
+        margin-right: 0;
+        z-index: 4;
+    }
+    
+    .texto {
+        opacity: 90%; 
+    }
+    #act-submenu:checked ~ .sub-menu {
+        display: block; 
+    }
+    .menu{
+        & .sub-menu {
+            position: absolute;
+            width: 100%; 
+
+            & li {
+                display: block;
+                text-align: center; 
+                & a {
+                    background-color: #fc7c7c;
+                }
+            }
+        }
+        & li {
+            display: block; 
+            & a {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                background-color: #ffb6b9;
+                height: 60px;
+                line-height: 46px;
+                border-bottom: 1px solid white; 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height:auto; }
+  #btn-label {
+    margin-right: 10px;
+    font-size: 25px; }
+    .logo {
+        width: 200px; 
+    }
+    .logo__titulo {
+      font-size: 13px; 
+    }
+    .logo__subtitulo {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    } 
+} 
